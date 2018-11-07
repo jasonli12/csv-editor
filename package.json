@@ -1,0 +1,22 @@
+{
+  "name": "csv-editor",
+  "version": "1.0.0",
+  "description": "A tool for creating and modifying csv files",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasonli12/csv-editor.git"
+  },
+  "keywords": [
+    "csv"
+  ],
+  "author": "Jason Li <jason.li0102@gmail.com> (http://www.jasonli.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jasonli12/csv-editor/issues"
+  },
+  "homepage": "https://github.com/jasonli12/csv-editor#readme"
+}
