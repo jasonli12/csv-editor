@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/jasonli12/csv-editor/issues"
   },
-  "homepage": "https://github.com/jasonli12/csv-editor#readme"
+  "homepage": "https://github.com/jasonli12/csv-editor#readme",
+  "dependencies": {
+    "papaparse": "4.6.1"
+  }
 }
