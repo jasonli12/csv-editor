@@ -18,11 +18,11 @@ class UserFunctions {
     })
   }
 
-  createNewCol(tableName, newColumnName, transformer) {
+  createColumn(tableName, newColumnName, transformer) {
     if (!this.data[tableName]) {
       throw new Error(`Table ${tableName} does not exist`);
     }
-    this.data[tableName].map(row => addProperty(row, newColumnName, transformer))
+    return this.data[tableName].map(row => addProperty(row, newColumnName, transformer))
   }
 
   deleteColumn(tableName, columnName) {
