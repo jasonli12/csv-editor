@@ -24,10 +24,27 @@ class UserFunctions {
     }
     this.data[tableName].map(row => addProperty(row, newColumnName, transformer))
   }
+
+  deleteColumn(tableName, columnName) {
+    if (!this.data[tableName]) {
+      throw new Error(`Table ${tableName} does not exist`);
+    }
+
+    if (!this.data[tableName][0].hasOwnProperty(columnName)) {
+      throw new Error(`Column ${columnName} does not exist in Table ${tableName}`);
+    }
+
+    return this.data[tableName].map(row => deleteProperty(row, columnName))
+  }
 }
 
 const addProperty = (row, newColumnName, transformer) => {
   typeof transformer === 'function' ? row[newColumnName] = transformer(row) : row[newColumnName] = transformer;
+  return row;
+}
+
+const deleteProperty = (row, columnName) => {
+  delete row[columnName];
   return row;
 }
 
